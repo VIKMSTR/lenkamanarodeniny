@@ -1,9 +1,14 @@
 <script>
 	import Tailwind from './components/Tailwind.svelte';
+	import IntersectionObserver from "svelte-intersection-observer";
+export let name
+  let element;
+  let intersecting;
+
   
-	export let name;
   </script>
   
+
   <Tailwind />
 <!-- <nav class="bg-blue-900 shadow-lg">
 	<div class="container mx-auto">
@@ -32,11 +37,47 @@
 	</div>
   </nav> --> 
 
+
+
+
+
+
   <div class="flex h-screen justify-center items-center">
     <div class="text-center"> <!-- ⬅️ THIS DIV WILL BE CENTERED -->
 		<p class="text-center text-8xl align-middle text-green-300 uppercase">už se to blíží </p>
     </div>
   </div>
+
+  <div class="flex h-screen justify-center items-center delay-500 duration-500 " class:intersecting>
+	<div class="text-center"> <!-- ⬅️ THIS DIV WILL BE CENTERED -->
+		<p class="text-center text-8xl align-middle text-green-300 uppercase">{intersecting ? "Element is in view" : "Element is not in view"}</p>
+    </div>
+</div>
+	
+	<IntersectionObserver
+	{element}
+	on:observe="{(e) => {
+	  console.log(e.detail); // IntersectionObserverEntry
+	  console.log(e.detail.isIntersecting); // true
+	  if(e.detail.isIntersecting){
+		e.detail.target.classList.add("animate-fadein")
+		e.detail.target.classList.remove("opacity-0")
+
+	  }else{
+		e.detail.target.classList.add("opacity-0")
+		e.detail.target.classList.remove("animate-fadein")
+	  }
+	  
+	}}"
+  >
+	<div class="flex h-screen justify-center items-center delay-500 duration-500 intersecting opacity-0" class:intersecting bind:this="{element}">
+	<div class="text-center">
+		<p class="text-center text-8xl align-middle text-green-300 uppercase">Hello world
+		</p>
+		</div>
+	</div>
+  </IntersectionObserver>
+
   <div class="flex h-screen justify-center items-center">
     <div class="text-center"> <!-- ⬅️ THIS DIV WILL BE CENTERED -->
 		<p class="text-center text-8xl align-middle text-yellow-300 uppercase">v září to rozzáří</p>
@@ -60,3 +101,4 @@
 	</div>
     </div>
   </div>
+
