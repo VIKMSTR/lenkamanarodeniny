@@ -69,12 +69,14 @@ export let name
 		<div class="flex-initial w-1/3"><img class="object-fill " src="nemocnica_pn.jpeg"/> </div>
 		<div class="w-2/3">	
 			<p class="text-2xl text-left text-green-300 mx-8">Narodila se krásná holčička! / Narodilo sa krásne dievčatko!</p>
-			<p class="text text-left text-green-300 mx-8"> Dne 19.9.1991 se narodila neobvykle krásná holčička v piešťanské nemocnici. Ihned po porodu se rozhlédla a řekla "Jáj?!"</p>
+			<p class="text text-left text-green-300 mx-8"> Dne 19.9.1991 se narodila neobvykle krásná holčička v piešťanské nemocnici. Ihned po porodu se rozhlédla a řekla "Jáj ?!"</p>
 			<p class="text text-left text-green-300 mx-8"> Dňa 19.9.1991 sa narodila neobvykle krásne dievčatko v piešťanskej nemocnici. Ihneď po pôrode sa rozhliadla a povedala "Jáj ?!"  </p>
 			<p class="text-sm text-left text-green-600 mx-8"> <br/> (Tehdy bylo ještě ČSFR, takže se všechno psalo dvojjazyčně, aby se ti druzí neurazili) </p>
 		</div>
 	</div>
 </AppearBlock>
+
+<AppearText text="Zpráva o její kráse se rychle roznesla" color="text-blue-200" />
 
   <div class="flex h-screen justify-center items-center">
     <div class="text-center"> <!-- ⬅️ THIS DIV WILL BE CENTERED -->
