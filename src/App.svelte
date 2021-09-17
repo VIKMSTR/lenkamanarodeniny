@@ -1,6 +1,7 @@
 <script>
 	import Tailwind from './components/Tailwind.svelte';
 	import IntersectionObserver from "svelte-intersection-observer";
+	import AppearText from "./components/AppearText.svelte"
 export let name
   let element;
   let intersecting;
@@ -38,7 +39,9 @@ export let name
   </nav> --> 
 
 
+<AppearText text="1991" color="text-red-200" />
 
+<AppearText text="1991" color="text-red-200" />
 
 
 
