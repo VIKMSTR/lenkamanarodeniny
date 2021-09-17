@@ -2,6 +2,8 @@
 	import Tailwind from './components/Tailwind.svelte';
 	import IntersectionObserver from "svelte-intersection-observer";
 	import AppearText from "./components/AppearText.svelte"
+	import AppearBlock from "./components/AppearBlock.svelte"
+
 export let name
   let element;
   let intersecting;
@@ -39,10 +41,21 @@ export let name
   </nav> --> 
 
 
-<AppearText text="1991" color="text-red-200" />
+<AppearText text="19.9.1991" color="text-red-200" />
 
-<AppearText text="1991" color="text-red-200" />
+<AppearText text="se stala významná událost" color="text-blue-200" />
 
+<AppearBlock>
+	<div class="flex flex-row">
+		<div>1</div>
+		<div class="flex-initial w-1/3"><img class="object-fill " src="otzi.jpeg"/> </div>
+		<div class="w-2/3">	
+			<p class="text-2xl text-left text-green-300 mx-8">Ötzi nalezen!</p>
+			<p class="text text-left text-green-300 mx-8">Ötzi byl nalezen dne 19. září 1991 dvěma německými turisty v nadmořské výšce 3210 metrů na východním hřebeni hory Fineilspitze v Ötztalských Alpách na rakousko-italské hranici. </p>
+			<p class="text text-left text-green-300 mx-8"> Je nejstarší známou evropskou přirozenou lidskou mumií a nabízí nebývalý pohled na Evropany doby měděné.  </p>
+		</div>
+	</div>
+</AppearBlock>
 
 
   <div class="flex h-screen justify-center items-center">
