@@ -3,7 +3,7 @@
 	import IntersectionObserver from "svelte-intersection-observer";
 	import AppearText from "./components/AppearText.svelte";
 	import AppearBlock from "./components/AppearBlock.svelte";
-
+	import TimeInfo from "./components/TimeInfo.svelte";
 	export let name;
 	let element;
 	let intersecting;
@@ -76,32 +76,39 @@
 	</div>
 </AppearBlock>
 
+
+
 <AppearBlock>
 	<div class="flex flex-row">
 				<img class="object-fill " src="tugendhatka.png" />
 	</div>
 </AppearBlock>
-
-<div class="flex h-screen justify-center items-center">
-	<div class="text-center">
-		<!-- ⬅️ THIS DIV WILL BE CENTERED -->
-		<p class="text-center text-8xl align-middle text-green-300 uppercase">
-			už se to blíží
-		</p>
+<AppearBlock>
+	<div class="flex flex-row">
+				<img class="object-fill " src="tugendhatka2.png" />
 	</div>
-</div>
+</AppearBlock>
 
-<div
-	class="flex h-screen justify-center items-center delay-500 duration-500 "
-	class:intersecting
->
-	<div class="text-center">
-		<!-- ⬅️ THIS DIV WILL BE CENTERED -->
-		<p class="text-center text-8xl align-middle text-green-300 uppercase">
-			{intersecting ? "Element is in view" : "Element is not in view"}
-		</p>
+<AppearText text="A čas šel dál a přidaly se i sportovní úspěchy" color="text-yellow-200" />
+
+<AppearBlock>
+	<div class="flex flex-row">
+				<img class="object-fill " src="sagan.png" />
 	</div>
-</div>
+</AppearBlock>
+
+<AppearBlock>
+	<div class="flex flex-row">
+				<img class="object-fill " src="riding.png" />
+	</div>
+</AppearBlock>
+
+
+<AppearBlock>
+	<div class="flex flex-row">
+			<TimeInfo/>
+	</div>
+</AppearBlock>
 
 <IntersectionObserver
 	{element}
