@@ -57,6 +57,9 @@ export let name
 	</div>
 </AppearBlock>
 
+<AppearBlock>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d960453.6444590689!2d17.028522060896698!3d48.646183395020614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476b548e5e16fe43%3A0xd0059dbdd49e7e58!2zOTIxIDAxIFBpZcWhxaVhbnksIFNsb3Zha2lh!5e0!3m2!1sen!2scz!4v1631867035262!5m2!1sen!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</AppearBlock>
 
   <div class="flex h-screen justify-center items-center">
     <div class="text-center"> <!-- ⬅️ THIS DIV WILL BE CENTERED -->
