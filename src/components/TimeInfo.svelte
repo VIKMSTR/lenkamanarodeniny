@@ -11,8 +11,8 @@
         daysTillNextBirthday = Math.ceil(dayjs(`${current.year()+1}-09-19`).diff(current, "day",true))
     }
     let message = "hi";
-    export let birthday = false;
-    if (Number.isInteger(age)) {
+    export let birthday = current.get("month") == 8 && current.get("date") == 19;
+    if (birthday) {
         message = "LENKA MÁ DNES NAROZENINY!";
         birthday = true;
     } else {
@@ -57,10 +57,6 @@
 </div>
 
 <style>
-    .redblock {
-        background-color: red;
-    }
-
     .another-rainbow {
         background: linear-gradient(
             238deg,

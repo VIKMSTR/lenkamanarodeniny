@@ -7,7 +7,6 @@
 	export let name;
 	let element;
 	let intersecting;
-	let isBirthday = false;
 </script>
 
 <Tailwind />
@@ -37,7 +36,7 @@
 	</div>
 </AppearBlock>
 
-<AppearText text="Ale 800km daleko se stalo ještě něco" color="text-red-200" />
+<AppearText text="Ale 800 km daleko se stalo ještě něco" color="text-red-200" />
 
 <AppearBlock>
 	<iframe
@@ -130,7 +129,7 @@
 
 <AppearBlock>
 	<div class="flex flex-row">
-			<TimeInfo bind:birthday={isBirthday}/>
+			<TimeInfo/>
 	</div>
 </AppearBlock>
 

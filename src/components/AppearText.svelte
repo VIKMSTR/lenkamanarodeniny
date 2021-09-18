@@ -24,7 +24,7 @@
   >
 	<div class="flex h-screen justify-center items-center delay-500 duration-500 intersecting opacity-0" class:intersecting bind:this="{element}">
 	<div class="text-center">
-		<p class="text-center text-8xl align-middle {color} uppercase"> {text}
+		<p class="text-center text-7xl align-middle {color} "> {text}
 		</p>
 		</div>
 	</div>
