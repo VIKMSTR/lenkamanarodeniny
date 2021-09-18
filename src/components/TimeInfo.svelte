@@ -1,17 +1,17 @@
 <script>
     import dayjs from "dayjs";
     let current = dayjs();
-    let test = dayjs("2021-09-19");
     let birth = dayjs("1991-09-19");
     let age = current.diff(birth, "year", true);
     let ageInt = age - (age % 1);
-    let testAge = test.diff(birth, "year", true);
-    console.log(testAge);
-    console.log(Number.isInteger(age));
-    console.log(Number.isInteger(testAge));
-    console.log(testAge % 1 != 0);
+    let daysTillNextBirthday = 0
+    if (current.isBefore(`${current.year()}-09-19`)) {
+        daysTillNextBirthday = Math.ceil(dayjs(`${current.year()}-09-19`).diff(current, "day",true))
+    }else {
+        daysTillNextBirthday = Math.ceil(dayjs(`${current.year()+1}-09-19`).diff(current, "day",true))
+    }
     let message = "hi";
-    let birthday = false;
+    export let birthday = false;
     if (Number.isInteger(age)) {
         message = "LENKA MÁ DNES NAROZENINY!";
         birthday = true;
@@ -33,9 +33,10 @@
     <p class="text text-2xl text-blue-400">
         Dnes je {current.format("DD.MM.YYYY")}, což znamená, že {message}
     </p>
-
-    {#if true}
-        <!-- {#if birthday} -->
+    <br/>
+  
+    <!-- {#if true} -->
+        {#if birthday}
         <div class="another-rainbow rounded-md">
             <p class="text text-6xl text-white p-12 font-black ">
                 VŠECHNO NEJLEPŠÍ K {ageInt}. NAROZENINÁM!
@@ -43,12 +44,16 @@
             <p class="text text-2xl text-white p-12 font-black ">
                 Máme* tě rádi :)
             </p>
-            <p class="text text-sm text-gray-400">
+            <p class="text text-sm text-gray-600">
                 * rodina, kamarádi, známí, Viktor, taneční komunita, koně, šneci, psi (kromě Sammyho), kočky (kromě Helmuta),
                 opraváři kol a půjčovny lodí.
             </p>
         </div>
-    {:else}{/if}
+    {:else}
+    <p class="text text-2xl text-yellow-400">
+        Zbývá {daysTillNextBirthday} dnů do příštích narozenin!
+    </p>
+    {/if}
 </div>
 
 <style>

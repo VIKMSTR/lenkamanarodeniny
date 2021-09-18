@@ -89,7 +89,7 @@
 	</div>
 </AppearBlock>
 
-<AppearText text="A čas šel dál a přidaly se i sportovní úspěchy" color="text-yellow-200" />
+<AppearText text="A čas šel dál, a přidaly se i sportovní úspěchy" color="text-yellow-200" />
 
 <AppearBlock>
 	<div class="flex flex-row">
@@ -110,76 +110,13 @@
 	</div>
 </AppearBlock>
 
-<IntersectionObserver
-	{element}
-	on:observe={(e) => {
-		console.log(e.detail); // IntersectionObserverEntry
-		console.log(e.detail.isIntersecting); // true
-		if (e.detail.isIntersecting) {
-			e.detail.target.classList.add("animate-fadein");
-			e.detail.target.classList.remove("opacity-0");
-		} else {
-			e.detail.target.classList.add("opacity-0");
-			e.detail.target.classList.remove("animate-fadein");
-		}
-	}}
->
-	<div
-		class="flex h-screen justify-center items-center delay-500 duration-500 intersecting opacity-0"
-		class:intersecting
-		bind:this={element}
-	>
-		<div class="text-center">
-			<p
-				class="text-center text-8xl align-middle text-green-300 uppercase"
-			>
-				Hello world
-			</p>
-		</div>
-	</div>
-</IntersectionObserver>
+<AppearText text="A k narozeninám si zazpívejme!" color="text-green-400" />
 
-<div class="flex h-screen justify-center items-center">
-	<div class="text-center">
-		<!-- ⬅️ THIS DIV WILL BE CENTERED -->
-		<p class="text-center text-8xl align-middle text-yellow-300 uppercase">
-			v září to rozzáří
-		</p>
-	</div>
-</div>
-<div class="flex h-screen justify-center items-center">
-	<div class="text-center">
-		<!-- ⬅️ THIS DIV WILL BE CENTERED -->
-		<p class="text-center text-8xl align-middle text-red-300 uppercase">
-			tak prostě počkej, no
-		</p>
-	</div>
-</div>
-<div class="flex h-screen justify-center items-center">
-	<div class="text-center">
-		<!-- ⬅️ THIS DIV WILL BE CENTERED -->
-		<p class="text-center text-8xl align-middle text-blue-300 uppercase ">
-			*chjo*
-		</p>
-	</div>
-</div>
-<div class="flex h-screen justify-center items-center">
-	<div class="text-center">
-		<!-- ⬅️ THIS DIV WILL BE CENTERED -->
-		<p class="text-center text-7xl align-middle text-orange-300 uppercase">
-			ok, tady je zatím na zkrácení volné chvíle
-		</p>
-		<div class="flex justify-center content-center">
-			<iframe
-				class="flex justify-center content-center"
-				width="640"
-				height="480"
-				src="https://www.youtube.com/embed/p3l7fgvrEKM"
-				title="YouTube video player"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen
-			/>
-		</div>
-	</div>
-</div>
+<AppearBlock>
+	<p class="text text-yellow-600">Narozeninové karaoke! (in english)</p> <br/>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/e9_0Gf84fa8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</AppearBlock>
+
+<AppearText text="A to je vše. Díky za pozornost!"/>
+
+<p class="text text-purple-500">Made with ♥ by @VIKMSTR</p>
