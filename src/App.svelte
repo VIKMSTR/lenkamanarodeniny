@@ -7,6 +7,7 @@
 	export let name;
 	let element;
 	let intersecting;
+	let isBirthday = false;
 </script>
 
 <Tailwind />
@@ -89,7 +90,7 @@
 	</div>
 </AppearBlock>
 
-<AppearText text="A čas šel dál, a přidaly se i sportovní úspěchy" color="text-yellow-200" />
+<AppearText text="A čas šel dál, a přidaly se úspěchy sportovní..." color="text-yellow-200" />
 
 <AppearBlock>
 	<div class="flex flex-row">
@@ -103,14 +104,37 @@
 	</div>
 </AppearBlock>
 
+<AppearText text="... a gastronomické!" color="text-yellow-200" />
 
 <AppearBlock>
 	<div class="flex flex-row">
-			<TimeInfo/>
+				<img class="object-fill " src="kolozvar.png" />
 	</div>
 </AppearBlock>
 
-<AppearText text="A k narozeninám si zazpívejme!" color="text-green-400" />
+<AppearBlock>
+	<div class="flex flex-row">
+				<img class="object-fill " src="jidlo.png" />
+	</div>
+</AppearBlock>
+
+<AppearText text="A kdo ví, kam to Lenka dotáhne v budoucnu!" color="text-green-400" />
+
+<AppearBlock>
+	<div class="flex flex-row">
+				<img class="object-fill " src="elon.png" />
+	</div>
+</AppearBlock>
+
+<AppearText text="Ale k věci. Už je čas slavit?" color="text-blue-400" />
+
+<AppearBlock>
+	<div class="flex flex-row">
+			<TimeInfo bind:birthday={isBirthday}/>
+	</div>
+</AppearBlock>
+
+<AppearText text="A nejen k narozeninám si zazpívejme!" color="text-green-400" />
 
 <AppearBlock>
 	<p class="text text-yellow-600">Narozeninové karaoke! (in english)</p> <br/>
