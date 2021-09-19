@@ -4,6 +4,7 @@
     import IntersectionObserver from "svelte-intersection-observer";
     let element;
   	let intersecting;
+	export let size = "text-7xl"   
 </script>
 
  <IntersectionObserver
@@ -23,9 +24,8 @@
 	}}"
   >
 	<div class="flex h-screen justify-center items-center delay-500 duration-500 intersecting opacity-0" class:intersecting bind:this="{element}">
-	<div class="text-center">
-		<p class="text-center text-7xl align-middle {color} "> {text}
+		<p class="text-center {size} align-middle {color} "> {text}
 		</p>
-		</div>
+
 	</div>
   </IntersectionObserver>

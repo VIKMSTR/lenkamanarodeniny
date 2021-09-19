@@ -38,7 +38,7 @@
     <!-- {#if true} -->
         {#if birthday}
         <div class="another-rainbow rounded-md">
-            <p class="text text-6xl text-white p-12 font-black ">
+            <p class="md:text-8xl text-white p-12 font-black ">
                 VŠECHNO NEJLEPŠÍ K {ageInt}. NAROZENINÁM!
             </p>
             <p class="text text-2xl text-white p-12 font-black ">
