@@ -64,7 +64,7 @@
 				nemocnici. Ihned po porodu se rozhlédla a řekla "Jáj ?!"
 			</p>
 			<p class="text text-left text-green-300 mx-8">
-				Dňa 19.9.1991 sa narodila neobvykle krásne dievčatko v
+				Dňa 19.9.1991 sa narodilo neobvykle krásne dievčatko v
 				piešťanskej nemocnici. Ihneď po pôrode sa rozhliadla a povedala
 				"Jáj ?!"
 			</p>
